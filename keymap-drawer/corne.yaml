@@ -94,8 +94,8 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-right-bold$$
-  - KP COMMA
-  - KP DOT
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
   - '?'
   - $$mdi:mouse-left-click-outline$$
   FUN:
