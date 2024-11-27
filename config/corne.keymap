@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD1";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LALT>;
+            bindings = <&kp LGUI>, <&mo 2>;
         };
 
         mmv {
@@ -69,14 +69,14 @@
             // |  ESC       |  Q  |  W  |  E  |  R  |  T  |          ↑    |  Y  |  U   |  I  |  O  |  P  |  [  | 
             // | SHIFT      |  A  |  S  |  D  |  F  |  G  |          ↓    |  H  |  J   |  K  |  L  |  ;  |  '  | 
             // | CTRL/TAB   |  Z  |  X  |  C  |  V  |  B  |          ←    |  N  |  M   |  ,  |  .  |  /  |  ]  |
-            //                    | GUI | RSE | SPC/LWR |            →    | ENT | BKSP | LALT|
+            //                    | GUI/RSE | LWR | SPC |            →    | ENT | BKSP | LALT|
             //                                                      enter
 
             bindings = <
 &kp ESC        &kp Q     &kp W        &kp E  &kp R     &kp T    &kp UP_ARROW     &kp Y        &kp U     &kp I      &kp O    &kp P     &kp LBKT
 &kp LEFT_SHIFT &kp A     &kp S        &kp D  &kp F     &kp G    &kp DOWN_ARROW   &kp H        &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &mt LCTRL TAB  &kp Z     &kp X        &kp C  &kp V     &kp B    &kp LEFT_ARROW   &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
-               &kp C_PP  &td1         &mo 1  &lt 2 SPACE        &kp RIGHT_ARROW  &lt 3 ENTER  &kp BSPC  &td0
+               &kp C_PP  &td1         &mo 1  &lt LALT SPACE     &kp RIGHT_ARROW  &lt 3 ENTER  &kp BSPC  &td0
                                                                 &kp ENTER
             >;
 
@@ -91,12 +91,12 @@
             // |  ESC       |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  `  |
             // | SHIFT      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  :  |
             // | CTRL/TAB   |     |  +  |  -  |  =  |  _  |   |  {  |  }  |  [  |  ]  |  \  |  ~  |
-            //                    | SPC/LWR | RSE | GUI |     |  ,  |  .  |  ?  |
+            //                    | GUI/RSE | LWR | SPC |     |  ,  |  .  |  ?  |
 
             bindings = <
 &kp ESC &kp N1    &kp N2          &kp N3        &kp N4        &kp N5            &kp UP_ARROW     &kp N6          &kp N7           &kp N8            &kp N9             &kp N0         &kp GRAVE
 &trans  &kp EXCL  &kp AT          &kp HASH      &kp DLLR      &kp PRCNT         &kp DOWN_ARROW   &kp CARET       &kp AMPS         &kp KP_MULTIPLY   &kp LPAR           &kp RPAR       &kp COLON
-&trans  &none     &kp KP_PLUS     &kp KP_MINUS  &kp KP_EQUAL  &kp UNDERSCORE    &kp LEFT_ARROW   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp TILDE
+&trans  &none     &kp KP_PLUS     &kp KP_MINUS  &kp EQUAL     &kp UNDERSCORE    &kp LEFT_ARROW   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp TILDE
                   &kp C_MUTE      &trans        &trans        &trans            &kp RIGHT_ARROW  &kp COMMA       &kp DOT          &kp QMARK
                                                                                 &mkp LCLK
             >;
@@ -112,7 +112,7 @@
             // |  F1        |  F2  |  F3  |  F4   |  F5  |  F6  |   |  F7  |  F8  |  F9  |  F10  |  F11  | F12 |
             // | SHIFT/CAPS |  PU  |  UP  |  PD   | HOME |      |   | PREV | NEXT | REW  |  FF   |       |     |
             // | CTRL/TAB   | LEFT | DOWN | RIGHT | END  |      |   |  MB1 |  MB2 |  MB3 |  MB4  |  MB5  |     |
-            //                     | SPC/LWR | RSE | GUI |          | ENT  |  DEL | RALT |
+            //                     | GUI/RSE | LWR | SPC |          | ENT  |  DEL | RALT |
 
             bindings = <
 &kp F1  &kp F2          &kp F3          &kp F4           &kp F5    &kp F6       &mmv MOVE_UP     &kp F7      &kp F8      &kp F9    &kp F10   &kp F11   &kp F12
