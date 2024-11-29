@@ -59,6 +59,13 @@
         tap-ms = <30>;
     };
 
+    track_encoder: track_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "TRACK_ENCODER";
+        #sensor-binding-cells = <0>;
+        bindings = <&kp C_PREV>, <&kp C_NEXT>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -96,13 +103,13 @@
             bindings = <
 &kp ESC &kp N1    &kp N2          &kp N3        &kp N4        &kp N5            &kp UP_ARROW     &kp N6          &kp N7           &kp N8            &kp N9             &kp N0         &kp GRAVE
 &trans  &kp EXCL  &kp AT          &kp HASH      &kp DLLR      &kp PRCNT         &kp DOWN_ARROW   &kp CARET       &kp AMPS         &kp KP_MULTIPLY   &kp LPAR           &kp RPAR       &kp COLON
-&trans  &none     &kp KP_PLUS     &kp KP_MINUS  &kp EQUAL     &kp UNDERSCORE    &kp LEFT_ARROW   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp TILDE
+&trans  &kp RALT  &kp KP_PLUS     &kp KP_MINUS  &kp EQUAL     &kp UNDERSCORE    &kp LEFT_ARROW   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp TILDE
                   &kp C_MUTE      &trans        &trans        &trans            &kp RIGHT_ARROW  &kp COMMA       &kp DOT          &kp QMARK
                                                                                 &mkp LCLK
             >;
 
             label = "NUMSYM";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&track_encoder>;
         };
 
         raise_layer {
