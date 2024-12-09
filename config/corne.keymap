@@ -63,7 +63,7 @@
         compatible = "zmk,behavior-sensor-rotate";
         label = "TRACK_ENCODER";
         #sensor-binding-cells = <0>;
-        bindings = <&kp C_PREV>, <&kp C_NEXT>;
+        bindings = <&kp C_NEXT>, <&kp C_PREV>;
     };
 
     keymap {
@@ -98,13 +98,13 @@
             // |  ESC       |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  `  |
             // | SHIFT      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  :  |
             // | CTRL/TAB   |     |  +  |  -  |  =  |  _  |   |  {  |  }  |  [  |  ]  |  \  |  ~  |
-            //                    | GUI/RSE | LWR | SPC |     |  ,  |  .  |  ?  |
+            //                    | GUI/RSE | LWR | SPC |     | ENT | BKSP | DEL |
 
             bindings = <
 &kp ESC &kp N1    &kp N2          &kp N3        &kp N4        &kp N5            &kp UP_ARROW     &kp N6          &kp N7           &kp N8            &kp N9             &kp N0         &kp GRAVE
 &trans  &kp EXCL  &kp AT          &kp HASH      &kp DLLR      &kp PRCNT         &kp DOWN_ARROW   &kp CARET       &kp AMPS         &kp KP_MULTIPLY   &kp LPAR           &kp RPAR       &kp COLON
 &trans  &kp RALT  &kp KP_PLUS     &kp KP_MINUS  &kp EQUAL     &kp UNDERSCORE    &kp LEFT_ARROW   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp TILDE
-                  &kp C_MUTE      &trans        &trans        &trans            &kp RIGHT_ARROW  &kp COMMA       &kp DOT          &kp QMARK
+                  &kp C_MUTE      &trans        &trans        &trans            &kp RIGHT_ARROW  &trans          &trans           &kp DEL
                                                                                 &mkp LCLK
             >;
 
