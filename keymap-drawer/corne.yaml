@@ -94,9 +94,9 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-right-bold$$
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - '?'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:mouse-left-click-outline$$
   FUN:
   - F1
